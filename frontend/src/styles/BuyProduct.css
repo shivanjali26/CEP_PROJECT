@@ -1,0 +1,117 @@
+/* 🎯 General Page Styling */
+.buy-product-page {
+    text-align: center;
+    padding: 20px;
+	color: #f9f8f7;
+}
+
+/* 📌 Category Filter Buttons - Updated with Equal Spacing */
+.category-buttons {
+    display: flex;
+    justify-content: center; /* Center-align buttons */
+    flex-wrap: wrap; /* Wrap buttons on smaller screens */
+    gap: 450px; /* Equal space between buttons */
+    margin: 20px 0;
+}
+
+/* 🏷️ Individual Category Buttons */
+.cat4 {
+    display: flex;
+    gap: 70px; /* Equal gap between all category buttons */
+}
+
+.cat4 button {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #f9f8f7;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cat4 button:hover {
+    background-color: #ff9900;
+    transform: scale(1.1);
+}
+
+/* ❌ Clear Filter Button - Now Spaced Equally */
+.clear-btn {
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+.clear-btn:hover {
+    background-color: #ff4500;
+}
+
+/* 🏷️ Grid Layout for Products */
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns per row */
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* 🏷️ Product Card Styling */
+.product-card {
+    width: 100%;
+    background-color: white;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+/* 🖼️ Image Styling */
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* 📝 Text Styling */
+.product-card h3 {
+	color:#555;
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.product-card p {
+    margin: 10px 0;
+    color: #555;
+}
+
+/* 💰 Price Styling */
+.price {
+    color: red;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* 🎯 Responsive Grid */
+@media (max-width: 1024px) {
+    .products-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 per row for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .products-container {
+        grid-template-columns: repeat(1, 1fr); /* 1 per row for mobile */
+    }
+}
